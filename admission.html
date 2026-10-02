@@ -1,0 +1,1453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admission | Lumbini Vision College</title>
+
+<style>
+:root{
+    --navy:#063763;
+    --navy2:#0b4f82;
+    --green:#087b61;
+    --green2:#0ca47f;
+    --gold:#f5bd35;
+    --gold2:#ffd86b;
+    --white:#ffffff;
+    --light:#f4faf8;
+    --text:#183247;
+    --muted:#687985;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f8f8;
+    color:var(--text);
+}
+
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--navy);
+    color:white;
+    min-height:42px;
+    padding:0 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:13px;
+}
+
+.topbar-left,
+.topbar-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.topbar .location{
+    color:white;
+}
+
+
+/* COLLEGE HEADER */
+
+.header{
+    background:white;
+    min-height:115px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.header::after{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    right:-70px;
+    top:-100px;
+    background:#eaf8f4;
+    border-radius:50%;
+}
+
+.logo{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    margin-right:20px;
+}
+
+.header-content h1{
+    color:var(--navy);
+    font-family:Georgia,serif;
+    font-size:39px;
+    letter-spacing:1px;
+}
+
+.header-content p{
+    margin-top:8px;
+    color:var(--green);
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:5px;
+}
+
+
+/* NAVIGATION */
+
+.navbar{
+    width:72%;
+    margin:-1px auto 0;
+    background:var(--navy);
+    min-height:52px;
+    padding:5px;
+    border-radius:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:20;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:12px 27px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    background:rgba(255,255,255,.12);
+    color:var(--gold2);
+}
+
+.navbar a.active{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+
+/* HERO */
+
+.hero{
+    width:100%;
+    min-height:430px;
+    margin-top:-1px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,45,82,.95) 0%,
+            rgba(3,55,95,.82) 38%,
+            rgba(3,55,95,.30) 70%,
+            rgba(3,55,95,.08) 100%
+        ),
+        url("images/college.jpg");
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-50px;
+    width:100%;
+    height:90px;
+    background:white;
+    border-radius:50% 50% 0 0;
+}
+
+.hero-content{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    color:white;
+    position:relative;
+    z-index:2;
+}
+
+.hero-small{
+    color:var(--gold);
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.hero h2{
+    font-family:Georgia,serif;
+    font-size:65px;
+    line-height:1.05;
+    margin:15px 0;
+}
+
+.hero h2 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:470px;
+    font-size:17px;
+    line-height:1.6;
+    color:#f2f7fa;
+}
+
+.apply-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 27px;
+    background:var(--gold);
+    color:var(--navy);
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.apply-btn:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+
+/* MAIN */
+
+.main{
+    width:92%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+
+/* ADMISSION AREA */
+
+.admission-area{
+    display:grid;
+    grid-template-columns:310px 1fr;
+    gap:25px;
+    align-items:stretch;
+}
+
+
+/* PROCESS */
+
+.process{
+    background:
+        linear-gradient(
+            145deg,
+            var(--navy),
+            var(--navy2)
+        );
+    color:white;
+    border-radius:12px;
+    padding:28px 22px;
+    box-shadow:0 10px 25px rgba(3,55,99,.18);
+}
+
+.process h2{
+    font-family:Georgia,serif;
+    font-size:27px;
+    margin-bottom:25px;
+    color:white;
+}
+
+.process-line{
+    position:relative;
+}
+
+.process-line::before{
+    content:"";
+    position:absolute;
+    left:18px;
+    top:20px;
+    bottom:20px;
+    width:2px;
+    background:rgba(255,255,255,.35);
+}
+
+.step{
+    display:flex;
+    gap:14px;
+    margin-bottom:22px;
+    position:relative;
+}
+
+.step:last-child{
+    margin-bottom:0;
+}
+
+.step-number{
+    width:38px;
+    height:38px;
+    min-width:38px;
+    border-radius:50%;
+    background:var(--gold);
+    color:var(--navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    z-index:2;
+}
+
+.step h3{
+    font-size:15px;
+    margin:2px 0 5px;
+}
+
+.step p{
+    color:#d9e8f0;
+    font-size:12px;
+    line-height:1.5;
+}
+
+
+/* COLLEGE INFO */
+
+.college-info{
+    margin-top:25px;
+    background:#e9f8f2;
+    color:var(--green);
+    border-radius:10px;
+    padding:16px;
+}
+
+.college-info h3{
+    font-family:Georgia,serif;
+    margin-bottom:10px;
+}
+
+.college-info p{
+    color:#28594e;
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* FORM */
+
+.form-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(5,55,90,.10);
+    border-top:4px solid var(--green);
+}
+
+.form-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:24px;
+}
+
+.form-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#e5f6f0;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.form-title h2{
+    font-family:Georgia,serif;
+    color:var(--navy);
+    font-size:28px;
+}
+
+.form-title p{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:4px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.field{
+    margin-bottom:16px;
+}
+
+.field label{
+    display:block;
+    color:var(--navy);
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    border:1px solid #cbd9e1;
+    border-radius:7px;
+    padding:12px;
+    font-family:Arial,sans-serif;
+    outline:none;
+    font-size:13px;
+    background:white;
+    transition:.3s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(8,123,97,.08);
+}
+
+.field textarea{
+    height:85px;
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+    border:none;
+    background:linear-gradient(90deg,var(--gold),var(--gold2));
+    color:var(--navy);
+    padding:14px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit:hover{
+    transform:translateY(-2px);
+    box-shadow:0 7px 18px rgba(245,189,53,.28);
+}
+
+
+/* SECTION TITLE */
+
+.section-title{
+    text-align:center;
+    margin:55px 0 25px;
+}
+
+.section-title h2{
+    font-family:Georgia,serif;
+    color:var(--navy);
+    font-size:30px;
+}
+
+.section-title p{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:6px;
+}
+
+
+/* PROGRAMS */
+
+.programs{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.program{
+    background:white;
+    border-radius:10px;
+    padding:22px 15px;
+    text-align:center;
+    border:1px solid #e0ece8;
+    transition:.3s;
+}
+
+.program:hover{
+    transform:translateY(-5px);
+    border-color:var(--gold);
+    box-shadow:0 8px 20px rgba(0,0,0,.07);
+}
+
+.program-icon{
+    width:50px;
+    height:50px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e6f6f0;
+    color:var(--green);
+    font-size:23px;
+}
+
+.program h3{
+    margin:12px 0 7px;
+    color:var(--navy);
+    font-size:16px;
+}
+
+.program p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.5;
+}
+
+
+/* REQUIREMENTS */
+
+.requirements{
+    background:#eaf8f3;
+    border-radius:12px;
+    padding:25px;
+    margin-top:20px;
+}
+
+.requirement-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.requirement{
+    background:white;
+    padding:20px;
+    border-radius:9px;
+    border:1px solid #dcece6;
+}
+
+.requirement h3{
+    color:var(--green);
+    font-size:15px;
+    margin:8px 0;
+}
+
+.requirement p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* FOOTER */
+
+footer{
+    margin-top:55px;
+    background:var(--navy);
+    color:white;
+    padding:35px 7% 18px;
+    position:relative;
+    overflow:hidden;
+}
+
+footer::before{
+    content:"";
+    position:absolute;
+    left:-50px;
+    bottom:-100px;
+    width:250px;
+    height:180px;
+    border-radius:50%;
+    background:var(--green);
+    opacity:.35;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1.4fr;
+    gap:35px;
+    position:relative;
+    z-index:2;
+}
+
+.footer-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.footer-logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+footer h3{
+    color:var(--gold);
+    font-family:Georgia,serif;
+    margin-bottom:12px;
+}
+
+footer p,
+footer a{
+    color:#d4e2ea;
+    font-size:12px;
+    line-height:1.8;
+    text-decoration:none;
+}
+
+footer a{
+    display:block;
+}
+
+footer a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.15);
+    margin-top:25px;
+    padding-top:15px;
+    color:#b9cbd5;
+    font-size:11px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .navbar{
+        width:90%;
+    }
+
+    .admission-area{
+        grid-template-columns:1fr;
+    }
+
+    .programs{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+
+@media(max-width:650px){
+
+    .topbar{
+        flex-direction:column;
+        gap:5px;
+        padding:8px 3%;
+        text-align:center;
+    }
+
+    .topbar-left,
+    .topbar-right{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:7px;
+    }
+
+    .header{
+        padding:15px 10px;
+    }
+
+    .logo{
+        width:55px;
+        height:55px;
+        margin-right:10px;
+    }
+
+    .header-content h1{
+        font-size:22px;
+    }
+
+    .header-content p{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .navbar{
+        width:95%;
+        border-radius:15px;
+    }
+
+    .navbar a{
+        padding:8px 10px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:430px;
+    }
+
+    .hero-content{
+        width:86%;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .form-box{
+        padding:22px 17px;
+    }
+
+    .programs{
+        grid-template-columns:1fr;
+    }
+
+    .requirement-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .main{
+        width:94%;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+
+    <div class="topbar-left">
+
+        <span>☎ +977-9857051373</span>
+        <span>|</span>
+        <span>+977-9857050350</span>
+        <span>✉  lvckv64@gmail.com</span>
+
+    </div>
+
+    <div class="topbar-right">
+
+        <span class="location">
+            📍 Banganga Municipality-3, Gangauliya, Kapilvastu
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- COLLEGE HEADER -->
+
+<header class="header">
+
+    <img
+        src="data:image/jpeg;base64,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"
+        class="logo"
+        alt="Lumbini Vision College Logo"
+    >
+
+    <div class="header-content">
+
+        <h1>LUMBINI VISION COLLEGE</h1>
+
+        <p>
+            EDUCATION &nbsp; | &nbsp;
+            CHARACTER &nbsp; | &nbsp;
+            SUCCESS
+        </p>
+
+    </div>
+
+</header>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html">
+        About Us
+    </a>
+
+    <a href="gallery.html">
+        Gallery
+    </a>
+
+    <a href="admission.html">
+        Admission
+    </a>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            LUMBINI VISION COLLEGE
+        </div>
+
+        <h2>
+            Admission <span>Open</span>
+        </h2>
+
+        <p>
+            Begin your academic journey with
+            quality education, practical learning
+            and opportunities for future growth.
+        </p>
+
+        <a href="#application" class="apply-btn">
+            Apply Now &nbsp; →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+    <!-- ADMISSION -->
+
+    <section id="application">
+
+        <div class="section-title">
+
+            <h2>
+                Start Your Admission
+            </h2>
+
+            <p>
+                Please provide accurate information
+                in the application form.
+            </p>
+
+        </div>
+
+
+        <div class="admission-area">
+
+
+            <!-- PROCESS -->
+
+            <div class="process">
+
+                <h2>
+                    Admission Process
+                </h2>
+
+                <div class="process-line">
+
+
+                    <div class="step">
+
+                        <div class="step-number">1</div>
+
+                        <div>
+                            <h3>Submit Application</h3>
+
+                            <p>
+                                Fill in the admission
+                                application form with
+                                correct information.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">2</div>
+
+                        <div>
+                            <h3>Application Review</h3>
+
+                            <p>
+                                The college reviews
+                                the submitted information.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">3</div>
+
+                        <div>
+                            <h3>Entrance / Interaction</h3>
+
+                            <p>
+                                Students may be required
+                                to attend the applicable
+                                admission process.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">4</div>
+
+                        <div>
+                            <h3>Admission Confirmation</h3>
+
+                            <p>
+                                Complete the required
+                                admission formalities.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COLLEGE INFO -->
+
+                <div class="college-info">
+
+                    <h3>
+                        📍 College Information
+                    </h3>
+
+                    <p>
+                        Banganga Municipality-3,
+                        Gangauliya, Kapilvastu, Nepal
+                    </p>
+
+                    <p>
+                        ☎ +977-9857051373
+                    </p>
+
+                    <p>
+                        ☎ +977-9857050350
+                    </p>
+
+                    <p>
+                        ✉ lvckv64@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="form-box">
+
+                <div class="form-title">
+
+                    <div class="form-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Admission Application
+                        </h2>
+
+                        <p>
+                            Please provide accurate
+                            information in the form below.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form>
+
+
+                    <div class="form-row">
+
+                        <div class="field">
+
+                            <label>
+                                Student Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Enter student name"
+                                required>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Date of Birth *
+                            </label>
+
+                            <input
+                                type="date"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="field">
+
+                            <label>
+                                Parent / Guardian Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                placeholder="Enter parent / guardian name"
+                                required>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Phone Number *
+                            </label>
+
+                            <input
+                                type="tel"
+                                placeholder="98XXXXXXXX"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="field">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                placeholder="example@email.com">
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Applying For *
+                            </label>
+
+                            <select required>
+
+                                <option value="">
+                                    Select Program
+                                </option>
+
+                                <option>
+                                    +2 Science
+                                </option>
+
+                                <option>
+                                    +2 Management
+                                </option>
+
+                                <option>
+                                    Bachelor of Business Studies (BBS)
+                                </option>
+
+                                <option>
+                                    Bachelor of Business Administration (BBA)
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Address *
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your address"
+                            required>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            placeholder="Write your message..."></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit">
+
+                        ✈ &nbsp;
+                        Submit Admission Application
+                        &nbsp; →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRAMS -->
+
+    <div class="section-title">
+
+        <h2>
+            Programs Available
+        </h2>
+
+        <p>
+            Choose the program that fits your future goals.
+        </p>
+
+    </div>
+
+
+    <section class="programs">
+
+
+        <div class="program">
+
+            <div class="program-icon">
+                🧪
+            </div>
+
+            <h3>
+                +2 Science
+            </h3>
+
+            <p>
+                Science education for
+                Grade 11 and 12 students.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="program-icon">
+                📊
+            </div>
+
+            <h3>
+                +2 Management
+            </h3>
+
+            <p>
+                Management-focused higher
+                secondary education.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="program-icon">
+                📖
+            </div>
+
+            <h3>
+                BBS
+            </h3>
+
+            <p>
+                Bachelor of Business Studies
+                under Tribhuvan University.
+            </p>
+
+        </div>
+
+
+        <div class="program">
+
+            <div class="program-icon">
+                💼
+            </div>
+
+            <h3>
+                BBA
+            </h3>
+
+            <p>
+                Bachelor of Business
+                Administration program.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- REQUIREMENTS -->
+
+    <div class="section-title">
+
+        <h2>
+            Admission Requirements
+        </h2>
+
+        <p>
+            Make sure you have the following
+            documents ready.
+        </p>
+
+    </div>
+
+
+    <section class="requirements">
+
+        <div class="requirement-grid">
+
+
+            <div class="requirement">
+
+                <div style="font-size:25px;">
+                    📄
+                </div>
+
+                <h3>
+                    Academic Records
+                </h3>
+
+                <p>
+                    Submit the required academic
+                    documents from your previous
+                    educational institution.
+                </p>
+
+            </div>
+
+
+            <div class="requirement">
+
+                <div style="font-size:25px;">
+                    📷
+                </div>
+
+                <h3>
+                    Passport Photos
+                </h3>
+
+                <p>
+                    Recent passport-size photographs
+                    may be required during admission.
+                </p>
+
+            </div>
+
+
+            <div class="requirement">
+
+                <div style="font-size:25px;">
+                    🪪
+                </div>
+
+                <h3>
+                    Identification
+                </h3>
+
+                <p>
+                    Provide the required student
+                    or guardian identification documents.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+
+                <img
+                    src="data:image/jpeg;base64,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"
+                    alt="College Logo">
+
+                <div>
+
+                    <h3>
+                        LUMBINI VISION COLLEGE
+                    </h3>
+
+                    <p>
+                        EDUCATION &nbsp; |
+                        CHARACTER &nbsp; |
+                        SUCCESS
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="academics.html">
+                Academics
+            </a>
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact Us
+            </h3>
+
+            <p>
+                ☎ +977-9857051373
+            </p>
+
+            <p>
+                ☎ +977-9857050350
+            </p>
+
+            <p>
+                ✉ lvckv64@gmail.com
+            </p>
+
+            <p>
+                📍 Banganga Municipality-3,
+                Gangauliya, Kapilvastu, Nepal
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Lumbini Vision College.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+

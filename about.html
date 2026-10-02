@@ -1,0 +1,1861 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Lumbini Vision College</title>
+
+<style>
+
+/* =========================================
+   COLOR THEME
+========================================= */
+
+:root{
+
+    --navy:#063763;
+    --navy2:#0b4f82;
+
+    --green:#087b61;
+    --green2:#0ca47f;
+
+    --gold:#f5bd35;
+    --gold2:#ffd86b;
+
+    --white:#ffffff;
+
+    --light:#f4f8f8;
+
+    --text:#183247;
+
+    --muted:#687985;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--light);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.topbar{
+
+    background:var(--navy);
+
+    color:white;
+
+    min-height:42px;
+
+    padding:0 5%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    font-size:13px;
+
+}
+
+
+.topbar-left,
+.topbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+.location{
+
+    color:var(--gold2);
+
+    font-weight:bold;
+
+}
+
+
+/* =========================================
+   COLLEGE HEADER
+========================================= */
+
+.header{
+
+    background:white;
+
+    min-height:115px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:170px;
+
+    height:170px;
+
+    left:-70px;
+
+    top:-90px;
+
+    border-radius:50%;
+
+    background:#e7f6f1;
+
+}
+
+
+.header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    right:-70px;
+
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:#fff4d5;
+
+}
+
+
+.logo{
+
+    width:72px;
+
+    height:72px;
+
+    object-fit:contain;
+
+    margin-right:18px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.header-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.header-content h1{
+
+    color:var(--navy);
+
+    font-family:Georgia,serif;
+
+    font-size:38px;
+
+    letter-spacing:1px;
+
+}
+
+
+.header-content p{
+
+    margin-top:7px;
+
+    color:var(--green);
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:5px;
+
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar{
+
+    width:72%;
+
+    min-height:53px;
+
+    margin:-1px auto 0;
+
+    padding:5px;
+
+    background:var(--navy);
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:20;
+
+    box-shadow:
+
+        0 8px 22px rgba(0,0,0,.18);
+
+}
+
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 22px;
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+.navbar a:hover{
+
+    color:var(--gold2);
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateY(-2px);
+
+}
+
+
+.navbar a.active{
+
+    color:var(--navy);
+
+    background:var(--gold);
+
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.about-hero{
+
+    min-height:330px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        linear-gradient(
+
+            rgba(3,55,95,.88),
+
+            rgba(8,123,97,.76)
+
+        ),
+
+        url("images/college.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.about-hero-content{
+
+    max-width:850px;
+
+    padding:30px 20px;
+
+}
+
+
+.about-hero small{
+
+    color:var(--gold);
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    font-size:13px;
+
+}
+
+
+.about-hero h2{
+
+    font-family:Georgia,serif;
+
+    font-size:54px;
+
+    margin:12px 0;
+
+}
+
+
+.about-hero p{
+
+    color:#edf7f5;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.main{
+
+    width:92%;
+
+    max-width:1150px;
+
+    margin:55px auto;
+
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    margin-bottom:28px;
+
+    border-radius:15px;
+
+    border:1px solid #dfebe7;
+
+    box-shadow:
+
+        0 8px 25px
+
+        rgba(6,55,99,.08);
+
+    transition:.3s;
+
+}
+
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 14px 30px
+
+        rgba(6,55,99,.13);
+
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+.section-heading h2{
+
+    color:var(--navy);
+
+    font-family:Georgia,serif;
+
+    font-size:31px;
+
+}
+
+
+.title-line{
+
+    width:65px;
+
+    height:4px;
+
+    border-radius:10px;
+
+    margin:12px auto;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--green),
+
+            var(--gold)
+
+        );
+
+}
+
+
+/* =========================================
+   WHO WE ARE
+========================================= */
+
+.about-content{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+
+.about-text h2{
+
+    color:var(--navy);
+
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+
+.about-text h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:50px;
+
+    height:3px;
+
+    background:var(--gold);
+
+    margin-top:9px;
+
+    border-radius:5px;
+
+}
+
+
+.about-text p{
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+
+.about-image{
+
+    min-height:270px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+
+        linear-gradient(
+
+            rgba(6,55,99,.2),
+
+            rgba(8,123,97,.3)
+
+        ),
+
+        url("images/college.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    box-shadow:
+
+        0 10px 25px
+
+        rgba(6,55,99,.15);
+
+}
+
+
+.about-image-label{
+
+    position:absolute;
+
+    left:18px;
+
+    bottom:18px;
+
+    background:
+
+        rgba(6,55,99,.9);
+
+    color:white;
+
+    padding:10px 17px;
+
+    border-radius:25px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+
+.about-image-label span{
+
+    color:var(--gold);
+
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.feature{
+
+    padding:27px 22px;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #ffffff,
+
+            #f0faf7
+
+        );
+
+    border-radius:13px;
+
+    border:1px solid #dbece7;
+
+    transition:.3s;
+
+}
+
+
+.feature:hover{
+
+    transform:translateY(-7px);
+
+    border-color:var(--gold);
+
+    box-shadow:
+
+        0 12px 25px
+
+        rgba(6,55,99,.10);
+
+}
+
+
+.feature-icon{
+
+    width:58px;
+
+    height:58px;
+
+    margin:0 auto 15px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--navy);
+
+    color:var(--gold);
+
+    font-size:25px;
+
+}
+
+
+.feature h3{
+
+    color:var(--navy);
+
+    font-family:Georgia,serif;
+
+    margin-bottom:8px;
+
+}
+
+
+.feature p{
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================
+   MISSION / VISION
+========================================= */
+
+.mission-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:22px;
+
+}
+
+
+.mission-box{
+
+    padding:28px;
+
+    border-radius:14px;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.mission-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    right:-35px;
+
+    bottom:-45px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+}
+
+
+.mission-box.vision{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--navy),
+
+            var(--navy2)
+
+        );
+
+}
+
+
+.mission-box.mission{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--green),
+
+            var(--green2)
+
+        );
+
+}
+
+
+.mission-box h3{
+
+    color:var(--gold);
+
+    font-family:Georgia,serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+
+.mission-box p{
+
+    color:#edf6f6;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   PRINCIPAL MESSAGE
+========================================= */
+
+.principal{
+
+    display:grid;
+
+    grid-template-columns:
+
+        190px 1fr;
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+
+.principal-image{
+
+    width:190px;
+
+    height:210px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#e7eeee;
+
+    border:4px solid #e8f3ef;
+
+}
+
+
+.principal-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.principal-message h2{
+
+    color:var(--navy);
+
+    font-family:Georgia,serif;
+
+    font-size:27px;
+
+    margin-bottom:12px;
+
+}
+
+
+.quote{
+
+    border-left:
+
+        4px solid
+
+        var(--gold);
+
+    padding-left:18px;
+
+    color:var(--muted);
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    font-style:italic;
+
+}
+
+
+.principal-name{
+
+    margin-top:18px;
+
+}
+
+
+.principal-name strong{
+
+    color:var(--navy);
+
+    font-size:17px;
+
+}
+
+
+.principal-name span{
+
+    display:block;
+
+    color:var(--green);
+
+    font-size:13px;
+
+    margin-top:3px;
+
+}
+
+
+/* =========================================
+   COLLEGE HIGHLIGHT BOX
+========================================= */
+
+.highlight{
+
+    margin-top:5px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            var(--navy),
+
+            var(--green)
+
+        );
+
+    color:white;
+
+}
+
+
+.highlight h2{
+
+    color:var(--gold);
+
+    font-family:Georgia,serif;
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+
+.highlight p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:#e9f4f3;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    margin-top:60px;
+
+    background:var(--navy);
+
+    color:white;
+
+    padding:38px 7% 18px;
+
+}
+
+
+.footer-grid{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+        1.3fr 1fr 1.4fr;
+
+    gap:35px;
+
+}
+
+
+.footer-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.footer-logo img{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:contain;
+
+}
+
+
+footer h3{
+
+    color:var(--gold);
+
+    font-family:Georgia,serif;
+
+    margin-bottom:12px;
+
+}
+
+
+footer p,
+footer a{
+
+    color:#d3e1e8;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    text-decoration:none;
+
+}
+
+
+footer a{
+
+    display:block;
+
+}
+
+
+footer a:hover{
+
+    color:var(--gold);
+
+}
+
+
+.footer-bottom{
+
+    text-align:center;
+
+    border-top:
+
+        1px solid
+
+        rgba(255,255,255,.15);
+
+    margin-top:25px;
+
+    padding-top:15px;
+
+    color:#b8cbd5;
+
+    font-size:11px;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:900px){
+
+    .navbar{
+
+        width:90%;
+
+    }
+
+
+    .about-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .features{
+
+        grid-template-columns:
+
+            repeat(2,1fr);
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:
+
+            1fr 1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:650px){
+
+    .topbar{
+
+        flex-direction:column;
+
+        gap:5px;
+
+        padding:8px 3%;
+
+        text-align:center;
+
+    }
+
+
+    .topbar-left,
+    .topbar-right{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:7px;
+
+    }
+
+
+    .header{
+
+        padding:15px 10px;
+
+    }
+
+
+    .logo{
+
+        width:55px;
+
+        height:55px;
+
+        margin-right:10px;
+
+    }
+
+
+    .header-content h1{
+
+        font-size:22px;
+
+    }
+
+
+    .header-content p{
+
+        font-size:8px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .navbar{
+
+        width:95%;
+
+        border-radius:15px;
+
+    }
+
+
+    .navbar a{
+
+        padding:8px 9px;
+
+        font-size:10px;
+
+    }
+
+
+    .about-hero{
+
+        min-height:300px;
+
+    }
+
+
+    .about-hero h2{
+
+        font-size:39px;
+
+    }
+
+
+    .about-hero p{
+
+        font-size:14px;
+
+    }
+
+
+    .main{
+
+        width:94%;
+
+        margin-top:40px;
+
+    }
+
+
+    .card{
+
+        padding:23px;
+
+    }
+
+
+    .features{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .mission-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .principal{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .principal-image{
+
+        margin:auto;
+
+    }
+
+
+    .quote{
+
+        text-align:left;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     TOP BAR
+===================================== -->
+
+<div class="topbar">
+
+    <div class="topbar-left">
+
+        <span>☎ +977-9857051373</span>
+
+        <span>|</span>
+
+        <span>+977-9857050350</span>
+
+        <span>✉ lvckv64@gmail.com</span>
+
+    </div>
+
+
+    <div class="topbar-right">
+
+        <span class="location">
+
+            📍 Banganga Municipality-3,
+            Gangauliya, Kapilvastu
+
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================
+     COLLEGE HEADER
+===================================== -->
+
+<header class="header">
+
+    <img
+        src="data:image/jpeg;base64,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"
+        class="logo"
+        alt="Lumbini Vision College Logo"
+    >
+
+
+    <div class="header-content">
+
+        <h1>
+            LUMBINI VISION COLLEGE
+        </h1>
+
+        <p>
+            EDUCATION &nbsp; | &nbsp;
+            CHARACTER &nbsp; | &nbsp;
+            SUCCESS
+        </p>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav class="navbar">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="about.html"
+        About Us>
+    </a>
+
+    <a href="gallery.html">
+        Gallery
+    </a>
+
+    <a href="admission.html">
+        Admission
+    </a>
+
+</nav>
+
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <small>
+            LUMBINI VISION COLLEGE
+        </small>
+
+        <h2>
+            About Our College
+        </h2>
+
+        <p>
+            Empowering minds, shaping leaders,
+            and creating futures through
+            quality education and meaningful
+            learning experiences.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     MAIN CONTENT
+===================================== -->
+
+<main class="main">
+
+
+<!-- =====================================
+     WHO WE ARE
+===================================== -->
+
+<section class="card">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <h2>
+                Who We Are
+            </h2>
+
+            <p>
+
+                Established in 2007, Lumbini Vision
+                College has been dedicated to
+                delivering high-quality education
+                and fostering academic excellence.
+
+                Located in Kapilvastu,
+                Banganga-3, our institution provides
+                a vibrant learning environment
+                equipped with modern infrastructure,
+                experienced faculty, and a rich
+                history of student achievements.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-image">
+
+
+            <div class="about-image-label">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNYnaMK_5sYpKjTEXWHFWNd50HF_peukv2ULyVkSwSFg&s" alt="college">
+
+                <span>●</span>
+                OUR COLLEGE
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     WHY CHOOSE US
+===================================== -->
+
+<section class="card">
+
+    <div class="section-heading">
+
+        <h2>
+            Why Choose Us
+        </h2>
+
+        <div class="title-line"></div>
+
+    </div>
+
+
+    <div class="features">
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🎓
+            </div>
+
+            <h3>
+                Expert Faculty
+            </h3>
+
+            <p>
+                Learn from experienced professors
+                and industry practitioners.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🏫
+            </div>
+
+            <h3>
+                Modern Campus
+            </h3>
+
+            <p>
+                Access updated laboratories,
+                libraries, and technology
+                facilities.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚀
+            </div>
+
+            <h3>
+                Career Support
+            </h3>
+
+            <p>
+                Dedicated placement assistance
+                and internship programs.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     VISION & MISSION
+===================================== -->
+
+<section class="card">
+
+    <div class="section-heading">
+
+        <h2>
+            Our Vision & Mission
+        </h2>
+
+        <div class="title-line"></div>
+
+    </div>
+
+
+    <div class="mission-grid">
+
+
+        <div class="mission-box vision">
+
+            <h3>
+                Our Vision
+            </h3>
+
+            <p>
+
+                To create an inspiring educational
+                environment where students develop
+                knowledge, confidence, creativity,
+                and the values needed to contribute
+                positively to society.
+
+            </p>
+
+        </div>
+
+
+        <div class="mission-box mission">
+
+            <h3>
+                Our Mission
+            </h3>
+
+            <p>
+
+                To provide quality education,
+                practical learning opportunities,
+                experienced guidance, and a
+                supportive environment for students
+                to achieve their goals.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     PRINCIPAL MESSAGE
+===================================== -->
+
+<section class="card">
+
+    <div class="principal">
+
+
+        <div class="principal-image">
+
+            <img
+                src="https://scontent.fkep3-1.fna.fbcdn.net/v/t39.30808-6/651239869_26504910542436030_4623361532714109895_n.jpg?stp=dst-jpg_tt6&cstp=mx1366x2048&ctp=s1366x2048&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XGmbcqOFwTIQ7kNvwH-Hmwq&_nc_oc=Ado4iRo37bjRluTEvBJBZxAD0oOsZvdpP5c-rG3J-qaDYljwotCiH4IJUTXrmBHAsQQ&_nc_zt=23&_nc_ht=scontent.fkep3-1.fna&_nc_gid=KO9VGXu_drWox12Ck9azvw&_nc_ss=7b2a8&oh=00_AQLOb0Mmui8cixgIxoqDXJwkGRbDFTCjd79YyWryj1EyOA&oe=6ABBAD6F"
+                alt="Principal"
+            >
+
+        </div>
+
+
+        <div class="principal-message">
+
+            <h2>
+                Message from the Dean / Principal
+            </h2>
+
+
+            <p class="quote">
+
+                "Welcome to our college community.
+                We are committed to providing an
+                inclusive space where students can
+                explore their passions, gain practical
+                knowledge, and build a strong foundation
+                for their future careers."
+
+            </p>
+
+
+            <div class="principal-name">
+
+                <strong>
+                    Sunder Pandey
+                </strong>
+
+                <span>
+                    Principal, Lumbini Vision College
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FINAL HIGHLIGHT
+===================================== -->
+
+<section class="highlight">
+
+    <h2>
+        Learn • Grow • Succeed
+    </h2>
+
+    <p>
+
+        At Lumbini Vision College, we believe
+        education is not only about academic
+        achievement. It is also about developing
+        confidence, character, creativity and
+        practical skills for the future.
+
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+    <div>
+
+        <div class="footer-logo">
+
+            <img
+                src="data:image/jpeg;base64,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"
+                alt="College Logo"
+            >
+
+            <div>
+
+                <h3>
+                    LUMBINI VISION COLLEGE
+                </h3>
+
+                <p>
+                    EDUCATION | CHARACTER | SUCCESS
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Quick Links
+        </h3>
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="admission.html">
+            Admission
+        </a>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Contact Us
+        </h3>
+
+        <p>
+            ☎ +977-9857051373
+        </p>
+
+        <p>
+            ☎ +977-9857050350
+        </p>
+
+        <p>
+            ✉ lvckv64@gmail.com
+        </p>
+
+        <p>
+            📍 Banganga Municipality-3,
+            Gangauliya, Kapilvastu, Nepal
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Lumbini Vision College.
+    All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
+

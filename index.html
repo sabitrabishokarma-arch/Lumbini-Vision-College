@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lumbini Vision College</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f4f7f6;
+            color: #263238;
+        }
+
+        /* ================= TOP BAR ================= */
+
+        .top-bar {
+            background: #12355b;
+            color: white;
+            padding: 9px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .top-left,
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .location {
+            color: #e7b84b;
+        }
+
+        /* ================= COLLEGE HEADER ================= */
+
+        .college-header {
+            background: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .college-header h1 {
+            color: #12355b;
+            font-size: 42px;
+            letter-spacing: 2px;
+        }
+
+        .college-header p {
+            color: #197a5a;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
+            margin-top: 7px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            width: 92%;
+            margin: 0 auto;
+            background: #12355b;
+            padding: 8px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            position: relative;
+            z-index: 5;
+            box-shadow: 0 8px 22px rgba(18, 53, 91, 0.20);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            background: #e7b84b;
+            color: #12355b;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            width: 92%;
+            height: 520px;
+            margin: 0 auto 35px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 8px 28px rgba(18, 53, 91, 0.15);
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(18, 53, 91, 0.90),
+                rgba(18, 53, 91, 0.55),
+                rgba(18, 53, 91, 0.10)
+            );
+        }
+
+        .hero-content {
+            position: absolute;
+            z-index: 2;
+            left: 8%;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 650px;
+            color: white;
+        }
+
+        .hero-content .small-title {
+            color: #e7b84b;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero-content h2 {
+            font-size: 50px;
+            line-height: 1.12;
+            margin: 15px 0;
+        }
+
+        .hero-content h2 span {
+            color: #e7b84b;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #e7b84b;
+            color: #12355b;
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* ================= PRINCIPAL ================= */
+
+        .principal-section {
+            width: 92%;
+            margin: 35px auto;
+            padding: 50px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 7px 25px rgba(18, 53, 91, 0.08);
+        }
+
+        .principal-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+        }
+
+        .principal-image {
+            width: 300px;
+            flex-shrink: 0;
+        }
+
+        .principal-image img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 4px solid #e7b84b;
+            box-shadow: 0 8px 20px rgba(18, 53, 91, 0.15);
+        }
+
+        .principal-text {
+            flex: 1;
+        }
+
+        .principal-text h2 {
+            color: #12355b;
+            font-size: 32px;
+            border-left: 5px solid #197a5a;
+            padding-left: 14px;
+            margin-bottom: 18px;
+        }
+
+        .principal-text p {
+            color: #52616b;
+            line-height: 1.8;
+            margin-bottom: 13px;
+        }
+
+        .signature {
+            border-top: 1px solid #dce3e7;
+            padding-top: 16px;
+            margin-top: 18px;
+        }
+
+        .signature .name {
+            color: #197a5a;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .signature .designation {
+            color: #12355b;
+            font-weight: 600;
+        }
+
+        /* ================= FEATURES ================= */
+
+        .features {
+            width: 92%;
+            margin: 35px auto;
+            padding: 35px 25px;
+            background: #eaf4f1;
+            border-radius: 18px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 15px;
+            border-right: 1px solid #d8c98d;
+        }
+
+        .feature:last-child {
+            border-right: none;
+        }
+
+        .icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #197a5a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .feature h3 {
+            color: #12355b;
+            margin-bottom: 6px;
+        }
+
+        .feature p {
+            color: #61717b;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* ================= ACADEMIC ================= */
+
+        .academics {
+            width: 92%;
+            margin: 45px auto;
+            text-align: center;
+        }
+
+        .academics h2 {
+            color: #12355b;
+            font-size: 34px;
+            margin-bottom: 8px;
+        }
+
+        .academics-subtitle {
+            color: #687780;
+            margin-bottom: 28px;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .academic-card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 15px;
+            border-top: 4px solid #197a5a;
+            box-shadow: 0 7px 22px rgba(18, 53, 91, 0.08);
+            transition: 0.3s;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-6px);
+            border-top-color: #e7b84b;
+        }
+
+        .academic-card h3 {
+            color: #12355b;
+            margin-bottom: 10px;
+        }
+
+        .academic-card p {
+            color: #687780;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #12355b;
+            color: white;
+            margin-top: 55px;
+            padding: 45px 7% 20px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+            gap: 30px;
+        }
+
+        footer h3 {
+            color: #e7b84b;
+            margin-bottom: 14px;
+        }
+
+        footer p,
+        footer a {
+            color: #dce6ed;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        footer a {
+            display: block;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: #e7b84b;
+        }
+
+        /* Social Media Icons Styling */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #e7b84b;
+            color: #12355b;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            margin-top: 30px;
+            padding-top: 18px;
+            color: #b9c8d2;
+            font-size: 13px;
+        }
+
+        /* ================= TABLET ================= */
+
+        @media (max-width: 900px) {
+
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature:nth-child(2) {
+                border-right: none;
+            }
+
+            .academic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .top-bar {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .top-left,
+            .top-right {
+                justify-content: center;
+                gap: 8px;
+            }
+
+            .college-header {
+                padding: 20px 10px;
+            }
+
+            .college-header h1 {
+                font-size: 27px;
+                letter-spacing: 1px;
+            }
+
+            .college-header p {
+                font-size: 9px;
+                letter-spacing: 2px;
+            }
+
+            .navbar {
+                width: 95%;
+                padding: 6px;
+                border-radius: 12px;
+            }
+
+            .navbar a {
+                padding: 9px 11px;
+                font-size: 12px;
+            }
+
+            .hero {
+                width: 95%;
+                height: 500px;
+            }
+
+            .hero-content {
+                left: 7%;
+                right: 7%;
+            }
+
+            .hero-content h2 {
+                font-size: 35px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .principal-section {
+                width: 95%;
+                padding: 25px;
+            }
+
+            .principal-container {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .principal-image {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .principal-image img {
+                height: 350px;
+            }
+
+            .features {
+                width: 95%;
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .feature {
+                border-right: none;
+                border-bottom: 1px solid #d8c98d;
+                padding-bottom: 22px;
+            }
+
+            .feature:last-child {
+                border-bottom: none;
+            }
+
+            .academics {
+                width: 95%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP INFORMATION BAR -->
+    <div class="top-bar">
+
+        <div class="top-left">
+            <span>📞 +977-9857051373</span>
+            <span>📞 +977-9857050350</span>
+            <span>✉️ lvckv64@gmail.com</span>
+        </div>
+
+        <div class="top-right">
+            <span class="location">
+                📍 Banganga Municipality-3, Gangauliya, Kapilvastu
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- COLLEGE NAME -->
+    <header class="college-header">
+
+        <h1>LUMBINI VISION COLLEGE</h1>
+
+        <p>
+            EDUCATION &nbsp; | &nbsp; CHARACTER &nbsp; | &nbsp; SUCCESS
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="admission.html">Admission</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6hm5W5nO9dbafEKO9dYNsUiISt2uGHlq4_GLVcquypg&s=10"
+            alt="Lumbini Vision College"
+        >
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                WELCOME TO LUMBINI VISION COLLEGE
+            </div>
+
+            <h2>
+                Education Today,<br>
+                <span>Leadership Tomorrow.</span>
+            </h2>
+
+            <p>
+                We provide quality education, practical knowledge,
+                strong values and a supportive environment to help
+                students build a successful future.
+            </p>
+
+            <a href="about.html" class="hero-btn">
+                Explore More →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRINCIPAL MESSAGE -->
+    <section class="principal-section">
+
+        <div class="principal-container">
+
+            <div class="principal-image">
+
+                <img
+                    src="https://scontent.fbwa1-1.fna.fbcdn.net/v/t39.30808-6/616582572_1282359307248093_7391496312686545714_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1440x1080&ctp=s1440x1080&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_ohc=tp-g9zkR2agQ7kNvwGIGnxF&_nc_oc=AdoB6cUp-R71z8cX1rKLdsNq7vVObKYgWQfkPxz5BXq96C-iG-Lh7pkDrU1XUWUMF6A&_nc_zt=23&_nc_ht=scontent.fbwa1-1.fna&_nc_gid=NCs7VpRhCyypg_2o4lUupw&_nc_ss=7b289&oh=00_AQMOn0PaAgnXGD54pJp9_jwUPRcGQAil2JDaYFVjIzDqWQ&oe=6AC554CD"
+                    alt="Principal"
+                >
+
+            </div>
+
+            <div class="principal-text">
+
+                <h2>Message from the Principal</h2>
+
+                <p>
+                    Welcome to <strong>Lumbini Vision College</strong>,
+                    a place dedicated to academic excellence,
+                    innovation and holistic development.
+                </p>
+
+                <p>
+                    We believe education goes beyond the classroom.
+                    Our goal is to help students develop critical
+                    thinking, practical skills and strong values.
+                </p>
+
+                <p>
+                    Through dedicated faculty, modern facilities and
+                    a supportive learning environment, we encourage
+                    curiosity, creativity and leadership.
+                </p>
+
+                <div class="signature">
+
+                    <strong>Warm regards,</strong><br>
+
+                    <span class="name">Principal</span><br>
+
+                    <span class="designation">
+                        Lumbini Vision College
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="feature">
+
+            <div class="icon">🎓</div>
+
+            <h3>Quality Education</h3>
+
+            <p>
+                Focused learning and academic development.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">👨‍🏫</div>
+
+            <h3>Experienced Faculty</h3>
+
+            <p>
+                Guidance from dedicated teaching professionals.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">🏫</div>
+
+            <h3>Modern Facilities</h3>
+
+            <p>
+                A supportive environment for learning and growth.
+            </p>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">🌟</div>
+
+            <h3>Student Success</h3>
+
+            <p>
+                Encouraging students to achieve their goals.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACADEMIC SECTION -->
+    <section class="academics">
+
+        <h2>Academic Excellence</h2>
+
+        <p class="academics-subtitle">
+            Building knowledge, skills and confidence for the future.
+        </p>
+
+        <div class="academic-grid">
+
+            <div class="academic-card">
+
+                <h3>Quality Learning</h3>
+
+                <p>
+                    We encourage students to develop strong
+                    academic foundations and practical knowledge.
+                </p>
+
+            </div>
+
+            <div class="academic-card">
+
+                <h3>Practical Skills</h3>
+
+                <p>
+                    Students are encouraged to develop useful
+                    skills alongside their academic studies.
+                </p>
+
+            </div>
+
+            <div class="academic-card">
+
+                <h3>Future Ready</h3>
+
+                <p>
+                    Our learning environment supports confidence,
+                    creativity and preparation for future goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>LUMBINI VISION COLLEGE</h3>
+
+                <p>
+                    Education | Character | Success
+                </p>
+
+                <p>
+                    Building knowledge, character and confidence
+                    for the future.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="admission.html">Admission</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Connect With Us</h3>
+
+                <p>Follow us on social media for regular updates and notices.</p>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
+                   
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>College Information</h3>
+
+                <p>
+                    📍 Banganga Municipality-3,
+                    Gangauliya, Kapilvastu, Nepal
+                </p>
+
+                <p>
+                    📞 +977-9857051373
+                </p>
+
+                <p>
+                    📞 +977-9857050350
+                </p>
+
+                <p>
+                    ✉️ lvckv64@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Lumbini Vision College.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
